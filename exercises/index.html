@@ -25,8 +25,8 @@
     background-color:red;
     width:200px;
     height:200px;
-    padding:200px;
-    opacity: 0.187575347587685765766556577657;
+    padding:2px;
+    opacity:0.7;
     }
 
   </style>
@@ -35,7 +35,7 @@
 <body>
 
 
-  <h1>In The Jungle The Lion Sleeps Tonight</h1>
+  <h1>I am Optimus Prime</h1>
   <img src="images/league-of-coders.jpg" alt="League of Coders">
   <p>Interested in developing your own website? Considering a career in web design and development or coding apps? These are exciting fields with plenty of room to be creative and innovative! In this module, we'll start with the basics - HTML and CSS - and
     then learn how to integrate data and add fun user interactions into your site by writing conditionals, loops and functions using Javascript. No experience required.
@@ -50,10 +50,10 @@ Anyone who develops software today can see in Hopper’s work the origins of key
 are fundamental to modern programming languages.
 She was one of the first programmers on the first computers in the United States, the <strong>Harvard Mark I.</strong>
 </p>
- <img src="images/1952_hopper-grace_large.jpg" alt="Grace Hopper" style"width:300px:height:300px;>
+ <img src="images/1952_hopper-grace_large.jpg" alt="Grace Hopper" style"width:300px:height:300px;">
 
-<h2>more lions<h2>
-<p>These are some of the woman that was involve in technology<p/>
+<h2>more lions</h2>
+<p>These are some of the woman that was involve in technology</p>
  <ul>
    <li>Ada Lovelace</li>
    <li>Adele Goldberbg</li>
@@ -62,6 +62,29 @@ She was one of the first programmers on the first computers in the United States
 
   <!-- Include JavaScript examples within script tags below -->
   <script type="text/javascript">
+    var myStringVariable = "Grace Hopper";
+    var myNumberVariable = 1952;
+    document.write("String variable:" + myStringVariable);
+
+    document.write("<p>Number variable:" + myNumberVariable + "</p>");
+    var namesArray = ["Ada Lovelace","Adele Goldberg","Anita Borg","Audrey Tang","Éva Tardos","Barbara Liskov","Beatrice Helen Worsley",
+    "Betty Holberton","Carla Meninsky","Carol Shaw","Dame Stephanie","Dana Ulery","Donna Dubinsky","Edith Clarke",
+    "Elizabeth J. Feinler","Ellen Spertus","Erna Schneider Hoover","Evelyn Boyd Granville","Frances Brazier","Frances E. Allen",
+    "Frances Spence","Gertrude Blanch","Grace Hopper","Grete Hermann","Hedy Lamarr","Henrietta Swan Leavitt","Ida Rhodes",
+    "Irene Greif","Irma Wyman","Janese Swanson","Jean Bartik","Jean E. Sammet","Jeri Ellsworth","Joan Margaret Winters",
+    "Joanna Rutkowska","Judith Estrin","Juliana Rotich","Karen Spärck Jones","Kathleen Booth","Kay McNulty","Kimberly Bryant",
+    "Limor Fried","Lorinda Cherry","Lynn Conway","Maria Klawe","Marissa Mayer","Marlyn Wescoff","Mary Allen Wilkes","Mary Lou Jepsen",
+    "Mary Shaw","Melanie","Monica S. Lam","Phyllis Fox","Radia Perlman","Rana el Kaliouby","Rósa Péter","Rebecca Enonchong","Roberta Williams",
+    "Ruchi Sanghvi","Ruth Lichterman","Sally Floyd","Sandra Kurtzig","Susan Estrada","Susan Nycum","Thelma Estrin","Window Snyder","Xiaoyuan Tu"];
+    //Output first element
+    document.write("First item in array:" + namesArray[0]);
+
+      document.write("<ul>");
+       var index;
+    for(index = 0; index < namesArray.length; index++) {
+      document.write("<li>" + namesArray[index] + "</li>");
+    }
+    document.write("</ul>");
     //JavaScript examples go here
 
   </script>
