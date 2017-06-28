@@ -1,3 +1,4 @@
 {
-  "browser": "chrome"
+  "browser": "chrome",
+  "root": "website"
 }
