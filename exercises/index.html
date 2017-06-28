@@ -56,7 +56,27 @@ She was one of the first programmers on the first computers in the United States
   <!-- Include JavaScript examples within script tags below -->
   <script type="text/javascript">
     //JavaScript examples go here
-
+    var myStringVariable = "Grace Hopper";
+    var myNumberVariable = 1952;
+    document.write("String variable:" + myStringVariable);
+    document.write("<p>Number variable:" + myNumberVariable + "</p>");
+    var namesArray = [ "Ada Lovelace","Adele Goldberg","Anita Borg","Audrey Tang","Éva Tardos","Barbara Liskov","Beatrice Helen Worsley",
+    "Betty Holberton","Carla Meninsky","Carol Shaw","Dame Stephanie","Dana Ulery","Donna Dubinsky","Edith Clarke",
+    "Elizabeth J. Feinler","Ellen Spertus","Erna Schneider Hoover","Evelyn Boyd Granville","Frances Brazier","Frances E. Allen",
+    "Frances Spence","Gertrude Blanch","Grace Hopper","Grete Hermann","Hedy Lamarr","Henrietta Swan Leavitt","Ida Rhodes",
+    "Irene Greif","Irma Wyman","Janese Swanson","Jean Bartik","Jean E. Sammet","Jeri Ellsworth","Joan Margaret Winters",
+    "Joanna Rutkowska","Judith Estrin","Juliana Rotich","Karen Spärck Jones","Kathleen Booth","Kay McNulty","Kimberly Bryant",
+    "Limor Fried","Lorinda Cherry","Lynn Conway","Maria Klawe","Marissa Mayer","Marlyn Wescoff","Mary Allen Wilkes","Mary Lou Jepsen",
+    "Mary Shaw","Melanie","Monica S. Lam","Phyllis Fox","Radia Perlman","Rana el Kaliouby","Rósa Péter","Rebecca Enonchong","Roberta Williams",
+    "Ruchi Sanghvi","Ruth Lichterman","Sally Floyd","Sandra Kurtzig","Susan Estrada","Susan Nycum","Thelma Estrin","Window Snyder","Xiaoyuan Tu"];
+    //Output first element
+    document.write("First item in array:" + namesArray[0]);
+    document.write("<ul>");
+    var index;
+    for(index = 0; index < namesArray.length; index++) {
+      document.write("<li>" + namesArray[index] +("</li>"));
+    }
+    document.write("</ul>");
   </script>
 
 
