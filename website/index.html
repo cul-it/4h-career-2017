@@ -75,6 +75,11 @@
     list-style-position: inside;
   }
 
+  .ourImage {
+    width:150px;
+    height:150px;
+  }
+
   </style>
   </head>
   <body>
@@ -124,133 +129,37 @@
 
   </script>
 
-=======
-    <title>Navigation Code</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      .primary-nav {
-        margin-top: 15px
-      }
+  <ul id="women_in_tech" style="clear:both">
 
-      .primary-nav ul {
-        list-style: none;
-        position: relative;
-        float: left;
-        margin: 0;
-        padding: 0
+  </ul>
+  <script type="text/javascript">
+  // AJAX function to get data file
+  function readJSONFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+      if (rawFile.readyState === 4 && rawFile.status == "200") {
+        callback(rawFile.responseText);
       }
-
-      .primary-nav ul a {
-        display: block;
-        color: #333;
-        text-decoration: none;
-        font-size: 16px;
-        line-height: 32px;
-        padding: 0 15px;
-      }
-
-      .primary-nav ul li {
-        position: relative;
-        float: left;
-        margin: 0;
-        padding: 0
-      }
-
-      .primary-nav ul li.active {
-        background:#ddd
-      }
-
-      .primary-nav ul li:hover {
-        background:#f6f6f6
-      }
-
-      .primary-nav ul ul {
-        display:none;
-        position:absolute;
-        top:100%;
-        left:0;
-        background:#fff;
-        padding:0
-      }
-
-      .primary-nav ul ul li {
-        float:none;
-        min-width:120px
-      }
-
-      .primary-nav ul ul a {
-        line-height:120%;
-        padding:10px 15px
-      }
-
-      .primary-nav ul li:hover > ul{
-        display:block
-      }
-
-    </style>
-  </head>
-  <body>
-    <h1>League of Coders</h1>
-    <!-- about, foundation donations, fields, a-z -->
-    <!-- home, our site, fields, centuries, future in stem -->
-    <!-- home, games, fields, all scientists, timeline -->
-    <!-- home, games, timeline, fields, directory -->
-    <!-- home, women in history, careers, colleges, community, feedback -->
-    <nav class="primary-nav">
-    <ul>
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Women in Technology</a>
-        <ul>
-          <li><a href="#">Sub Menu 1</a></li>
-          <li><a href="#">Sub Menu 2</a></li>
-          <li><a href="#">Sub Menu 3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Fields in Technology</a>
-        <ul>
-          <li><a href="#">Sub Menu 1</a></li>
-          <li><a href="#">Sub Menu 2</a></li>
-          <li><a href="#">Sub Menu 3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Community Resources</a>
-        <ul>
-          <li><a href="#">Sub Menu 1</a></li>
-          <li><a href="#">Sub Menu 2</a></li>
-          <li><a href="#">Sub Menu 3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-    </nav>
-    <!--  Place holder for women in technology list-->
-    <ul id="women_in_tech" style="clear:both">
-
-    </ul>
-    <script type="text/javascript">
-    // AJAX function to get data file
-    function readJSONFile(file, callback) {
-      var rawFile = new XMLHttpRequest();
-      rawFile.overrideMimeType("application/json");
-      rawFile.open("GET", file, true);
-      rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-          callback(rawFile.responseText);
-        }
-      }
-      rawFile.send(null);
     }
+    rawFile.send(null);
+  }
 
-    //Usage:
-    readJSONFile("data/wit.json", function(text) {
-      var data = JSON.parse(text);
-      var profiles = data.profiles;
-      for (var i = 0; i < profiles.length; i++) {
-        document.getElementById('women_in_tech').innerHTML +=
-        ("<li><img src=" + profiles[i].image_path + ">" + profiles[i].given_name + " " + profiles[i].surname + "</li>")
-      }
-    });
-    </script>
->>>>>>> master
+  //Usage:
+  readJSONFile("data/wit.json", function(text) {
+    var data = JSON.parse(text);
+    var profiles = data.profiles;
+    for (var i = 0; i < profiles.length; i++) {
+
+      document.getElementById('women_in_tech').innerHTML +=
+      ("<li><img class='ourImage' src=" + profiles[i].image_path + ">" + profiles[i].given_name + " " + profiles[i].surname + "</li>")
+    }
+  });
+
+
+  </script>
+
+
   </body>
 </html>
