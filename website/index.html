@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-<<<<<<< HEAD
     <meta charset="utf-8">
     <title>Page Title</title>
     <style>
@@ -72,77 +71,6 @@
     </style>
   </head>
   <body>
-    <h1>Something Awesome</h1>
-    <nav class="primary-nav">
-    <ul>
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Women Scientists</a>
-=======
-    <title>Navigation Code</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      .primary-nav {
-        margin-top: 15px
-      }
-
-      .primary-nav ul {
-        list-style: none;
-        position: relative;
-        float: left;
-        margin: 0;
-        padding: 0
-      }
-
-      .primary-nav ul a {
-        display: block;
-        color: #333;
-        text-decoration: none;
-        font-size: 16px;
-        line-height: 32px;
-        padding: 0 15px;
-      }
-
-      .primary-nav ul li {
-        position: relative;
-        float: left;
-        margin: 0;
-        padding: 0
-      }
-
-      .primary-nav ul li.active {
-        background:#ddd
-      }
-
-      .primary-nav ul li:hover {
-        background:#f6f6f6
-      }
-
-      .primary-nav ul ul {
-        display:none;
-        position:absolute;
-        top:100%;
-        left:0;
-        background:#fff;
-        padding:0
-      }
-
-      .primary-nav ul ul li {
-        float:none;
-        min-width:120px
-      }
-
-      .primary-nav ul ul a {
-        line-height:120%;
-        padding:10px 15px
-      }
-
-      .primary-nav ul li:hover > ul{
-        display:block
-      }
-
-    </style>
-  </head>
-  <body>
     <h1>League of Coders</h1>
     <!-- about, foundation donations, fields, a-z -->
     <!-- home, our site, fields, centuries, future in stem -->
@@ -153,25 +81,12 @@
     <ul>
       <li class="active"><a href="#">Home</a></li>
       <li><a href="#">Women in Technology</a>
->>>>>>> master
-        <ul>
-          <li><a href="#">Sub Menu 1</a></li>
-          <li><a href="#">Sub Menu 2</a></li>
-          <li><a href="#">Sub Menu 3</a></li>
-        </ul>
-      </li>
       <li><a href="#">Fields in Technology</a>
         <ul>
-<<<<<<< HEAD
           <li><a href="#">Engineering</a></li>
           <li><a href="#">Computing</a></li>
           <li><a href="#">Mathematics</a></li>
           <li><a href="#">Biology</a></li>
-=======
-          <li><a href="#">Sub Menu 1</a></li>
-          <li><a href="#">Sub Menu 2</a></li>
-          <li><a href="#">Sub Menu 3</a></li>
->>>>>>> master
         </ul>
       </li>
       <li><a href="#">Community Resources</a>
@@ -184,7 +99,6 @@
       <li><a href="#">Contact Us</a></li>
     </ul>
     </nav>
-<<<<<<< HEAD
 
     <script type="text/javascript">
     var alphabetArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M","N", "O", "P", "Q", "R", "S",
@@ -258,7 +172,6 @@
     <h3 id="alpha-y">Y</h3>
     <h3 id="alpha-z">Z</h3>
 
-=======
     <!--  Place holder for women in technology list-->
     <ul id="women_in_tech" style="clear:both">
 
@@ -282,11 +195,17 @@
       var data = JSON.parse(text);
       var profiles = data.profiles;
       for (var i = 0; i < profiles.length; i++) {
+        var surname = profiles[i].surname;
+        var firstLetter = surname.charAt(0);
+
+        if(firstLetter == "A"){
+          document.getElementById('women_in_tech').innerHTML += "<h2>B</h2>";
+        }
         document.getElementById('women_in_tech').innerHTML +=
         ("<li><img src=" + profiles[i].image_path + ">" + profiles[i].given_name + " " + profiles[i].surname + "</li>")
       }
     });
     </script>
->>>>>>> master
+
   </body>
 </html>
