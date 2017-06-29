@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-<<<<<<< HEAD
     <meta charset="utf-8">
     <title>Page Title</title>
-=======
-    <title>Navigation Code</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
->>>>>>> master
     <style>
       .primary-nav {
         margin-top: 15px
@@ -68,14 +63,21 @@
         display:block
       }
 
-<<<<<<< HEAD
       .clearul {
         clear:both;
       }
+
     </style>
   </head>
   <body>
-        <h1>Something Awesome</h1>
+
+    <h1>League of Coders</h1>
+    <!-- about, foundation donations, fields, a-z -->
+    <!-- home, our site, fields, centuries, future in stem -->
+    <!-- home, games, fields, all scientists, timeline -->
+    <!-- home, games, timeline, fields, directory -->
+    <!-- home, women in history, careers, colleges, community, feedback -->
+
         <nav class="primary-nav">
         <ul>
           <li class="active"><a href="#">Home</a></li>
@@ -110,11 +112,11 @@
 var alphabetArray=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var i;
-var arrayLength = alphebetArray.length;
+var arrayLength = alphabetArray.length;
 document.write("<ul class='clearul'>");
 for(i=0; i < arrayLength; i++) {
 document.write("<li><a href= '#alpha-" + alphabetArray[i].toLowerCase()+"'>" +
-alphabetArray + "</li>");
+alphabetArray[i] + "</li>");
 }
 document.write("</ul>");
 </script>
@@ -146,43 +148,9 @@ document.write("</ul>");
         <h3 id="alpha-y">Y</h3>
         <h3 id="alpha-z">Z</h3>
 
-=======
-    </style>
-  </head>
-  <body>
-    <h1>League of Coders</h1>
-    <!-- about, foundation donations, fields, a-z -->
-    <!-- home, our site, fields, centuries, future in stem -->
-    <!-- home, games, fields, all scientists, timeline -->
-    <!-- home, games, timeline, fields, directory -->
-    <!-- home, women in history, careers, colleges, community, feedback -->
-    <nav class="primary-nav">
-    <ul>
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Women in Technology</a>
-        <ul>
-          <li><a href="#">Sub Menu 1</a></li>
-          <li><a href="#">Sub Menu 2</a></li>
-          <li><a href="#">Sub Menu 3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Fields in Technology</a>
-        <ul>
-          <li><a href="#">Sub Menu 1</a></li>
-          <li><a href="#">Sub Menu 2</a></li>
-          <li><a href="#">Sub Menu 3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Community Resources</a>
-        <ul>
-          <li><a href="#">Sub Menu 1</a></li>
-          <li><a href="#">Sub Menu 2</a></li>
-          <li><a href="#">Sub Menu 3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-    </nav>
+
+
+
     <!--  Place holder for women in technology list-->
     <ul id="women_in_tech" style="clear:both">
 
@@ -211,6 +179,5 @@ document.write("</ul>");
       }
     });
     </script>
->>>>>>> master
   </body>
 </html>
