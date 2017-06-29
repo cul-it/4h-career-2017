@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-<<<<<<< HEAD
     <meta charset="utf-8">
     <title>Page Title</title>
     <style>
@@ -68,83 +67,16 @@
   .clearUL{
 clear:both;
   }
+
+
+  .ourImage{
+    width: 150px;
+    height:150px;
+  }
     </style>
   </head>
   <body>
     <h1>Women in Technology</h1>
-=======
-    <title>Navigation Code</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      .primary-nav {
-        margin-top: 15px
-      }
-
-      .primary-nav ul {
-        list-style: none;
-        position: relative;
-        float: left;
-        margin: 0;
-        padding: 0
-      }
-
-      .primary-nav ul a {
-        display: block;
-        color: #333;
-        text-decoration: none;
-        font-size: 16px;
-        line-height: 32px;
-        padding: 0 15px;
-      }
-
-      .primary-nav ul li {
-        position: relative;
-        float: left;
-        margin: 0;
-        padding: 0
-      }
-
-      .primary-nav ul li.active {
-        background:#ddd
-      }
-
-      .primary-nav ul li:hover {
-        background:#f6f6f6
-      }
-
-      .primary-nav ul ul {
-        display:none;
-        position:absolute;
-        top:100%;
-        left:0;
-        background:#fff;
-        padding:0
-      }
-
-      .primary-nav ul ul li {
-        float:none;
-        min-width:120px
-      }
-
-      .primary-nav ul ul a {
-        line-height:120%;
-        padding:10px 15px
-      }
-
-      .primary-nav ul li:hover > ul{
-        display:block
-      }
-
-    </style>
-  </head>
-  <body>
-    <h1>League of Coders</h1>
-    <!-- about, foundation donations, fields, a-z -->
-    <!-- home, our site, fields, centuries, future in stem -->
-    <!-- home, games, fields, all scientists, timeline -->
-    <!-- home, games, timeline, fields, directory -->
-    <!-- home, women in history, careers, colleges, community, feedback -->
->>>>>>> master
     <nav class="primary-nav">
     <ul>
       <li class="active"><a href="#">Home</a></li>
@@ -157,17 +89,11 @@ clear:both;
       </li>
       <li><a href="#">Fields in Technology</a>
         <ul>
-<<<<<<< HEAD
           <li><a href="#">Careers</a></li>
           <li><a href="#">Computing</a></li>
           <li><a href="#">Engineering</a></li>
           <li><a href="#">Math</a></li>
           <li><a href="#">Science</a></li>
-=======
-          <li><a href="#">Sub Menu 1</a></li>
-          <li><a href="#">Sub Menu 2</a></li>
-          <li><a href="#">Sub Menu 3</a></li>
->>>>>>> master
         </ul>
       </li>
       <li><a href="#">Community Resources</a>
@@ -180,7 +106,9 @@ clear:both;
       <li><a href="#">Contact Us</a></li>
     </ul>
     </nav>
-<<<<<<< HEAD
+    <ul id="women_in_tech" style="clear:both;">
+
+    </ul>
 
 
 <script type="text/javascript">
@@ -191,39 +119,12 @@ var i;
 var arrayLength=alphabetArray.length;
 document.write("<ul class='clearUL'ul>");
 for(i=0; i<arrayLength; i++) {
-document.write("<li><a href='#alpha-"+ alphabetArray[i],toLowerCase() + "'>" + alphabetArray[i] + "</a></li>");
+document.write("<li><a href='#alpha-"+ alphabetArray[i].toLowerCase() + "'>" + alphabetArray[i] + "</a></li>");
 }
 document.write("</ul>");
 </script>
 
-    <ul class="clearUL">
-      <li><a href="#alpha-a">A</a></li>
-      <li><a href="#alpha-b">B</a></li>
-      <li><a href="#alpha-c">C</a></li>
-      <li><a href="#alpha-d">D</a></li>
-      <li><a href="#alpha-e">E</a></li>
-      <li><a href="#alpha-f">F</a></li>
-      <li><a href="#alpha-g">G</a></li>
-      <li><a href="#alpha-h">H</a></li>
-      <li><a href="#alpha-i">I</a></li>
-      <li><a href="#alpha-j">J</a></li>
-      <li><a href="#alpha-k">K</a></li>
-      <li><a href="#alpha-l">L</a></li>
-      <li><a href="#alpha-m">M</a></li>
-      <li><a href="#alpha-n">N</a></li>
-      <li><a href="#alpha-o">O</a></li>
-      <li><a href="#alpha-p">P</a></li>
-      <li><a href="#alpha-q">Q</a></li>
-      <li><a href="#alpha-r">R</a></li>
-      <li><a href="#alpha-s">S</a></li>
-      <li><a href="#alpha-t">T</a></li>
-      <li><a href="#alpha-u">U</a></li>
-      <li><a href="#alpha-v">V</a></li>
-      <li><a href="#alpha-w">W</a></li>
-      <li><a href="#alpha-x">X</a></li>
-      <li><a href="#alpha-y">Y</a></li>
-      <li><a href="#alpha-z">Z</a></li>
-    </ul>
+
 
     <h3 id="alpha-a">A</h3>
     <h3 id="alpha-b">B</h3>
@@ -252,35 +153,36 @@ document.write("</ul>");
     <h3 id="alpha-y">Y</h3>
     <h3 id="alpha-z">Z</h3>
 
-=======
-    <!--  Place holder for women in technology list-->
-    <ul id="women_in_tech" style="clear:both">
-
-    </ul>
     <script type="text/javascript">
-    // AJAX function to get data file
-    function readJSONFile(file, callback) {
-      var rawFile = new XMLHttpRequest();
-      rawFile.overrideMimeType("application/json");
-      rawFile.open("GET", file, true);
-      rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-          callback(rawFile.responseText);
-        }
-      }
-      rawFile.send(null);
-    }
+   // AJAX function to get data file
+   function readJSONFile(file, callback) {
+     var rawFile = new XMLHttpRequest();
+     rawFile.overrideMimeType("application/json");
+     rawFile.open("GET", file, true);
+     rawFile.onreadystatechange = function() {
+       if (rawFile.readyState === 4 && rawFile.status == "200") {
+         callback(rawFile.responseText);
+       }
+     }
+     rawFile.send(null);
+   }
 
-    //Usage:
-    readJSONFile("data/wit.json", function(text) {
-      var data = JSON.parse(text);
-      var profiles = data.profiles;
-      for (var i = 0; i < profiles.length; i++) {
-        document.getElementById('women_in_tech').innerHTML +=
-        ("<li><img src=" + profiles[i].image_path + ">" + profiles[i].given_name + " " + profiles[i].surname + "</li>")
-      }
-    });
-    </script>
->>>>>>> master
+   //Usage:
+   readJSONFile("data/wit.json", function(text) {
+     var data = JSON.parse(text);
+     var profiles = data.profiles;
+     for (var i = 0; i < profiles.length; i++) {
+       var surname=profiles[i].surname;
+       var firstLetter= surname.charAt(0)
+
+       if(firstLetter=="A"){
+         document.getElementById('women_in_tech').innerHTML += ("<h2>A</h2>");
+       }
+       document.getElementById('women_in_tech').innerHTML +=
+       ("<li><img class='ourImage' src=" + profiles[i].image_path + ">" + profiles[i].given_name + " " + profiles[i].surname + "</li>")
+     }
+   });
+   </script>
+
   </body>
 </html>
