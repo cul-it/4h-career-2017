@@ -68,6 +68,12 @@
     .clearUL {
     Clear:both;
   }
+
+.ourImage {
+  width: 150px;
+  height: 150px;
+}
+
     </style>
   </head>
   <body>
@@ -118,7 +124,9 @@ document.write("<ul class='clearUL'>");
 
     </script>
 
-  
+
+
+
 
       <h3 id="alpha-a">A</h3>
       <h3 id="alpha-b">B</h3>
@@ -270,8 +278,16 @@ document.write("<ul class='clearUL'>");
       var data = JSON.parse(text);
       var profiles = data.profiles;
       for (var i = 0; i < profiles.length; i++) {
+          var surname = profiles[1].surname;
+          var firstLetter = surname.charAt(0);
+          console.log(firstLetter);
+          if(firstLetter == "B") {
+            document.getElementById('women_in_tech').innerHTML += ("<h2>B</h2>");
+
+
+          }
         document.getElementById('women_in_tech').innerHTML +=
-        ("<li><img src=" + profiles[i].image_path + ">" + profiles[i].given_name + " " + profiles[i].surname + "</li>")
+        ("<li><img class='ourImage' src=" + profiles[i].image_path + ">" + profiles[i].given_name + " " + profiles[i].surname + "</li>")
       }
     });
     </script>
