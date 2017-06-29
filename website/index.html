@@ -68,6 +68,11 @@
       clear:both;
     }
 
+    .ourImage {
+      width:150px;
+      height:150px;
+    }
+
     </style>
   </head>
   <body>
@@ -103,6 +108,7 @@
     </ul>
     </nav>
 
+
     <script type="text/javascript">
     var alphabetArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
   "K", "L", "M", "N", "O", "P", "Q","R", "S", "T", "U", "V", "W", "X", "Y",
@@ -117,6 +123,10 @@
     document.write("</ul>");
 
     </script>
+
+
+
+
 
 
     <h3 id="alpha-a">A</h3>
@@ -146,5 +156,39 @@
     <h3 id="alpha-y">Y</h3>
     <h3 id="alpha-z">Z</h3>
 
+    <!--  Place holder for women in technology list-->
+    <ul id="women_in_tech" style="clear:both">
+
+    </ul>
+    <script type="text/javascript">
+    // AJAX function to get data file
+    function readJSONFile(file, callback) {
+      var rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+          callback(rawFile.responseText);
+        }
+      }
+      rawFile.send(null);
+    }
+
+    //Usage:
+    readJSONFile("data/wit.json", function(text) {
+      var data = JSON.parse(text);
+      var profiles = data.profiles;
+      for (var i = 0; i < profiles.length; i++) {
+        var surname = profiles[i].surname;
+        var firstLetter = surname.charAt(0);
+        console.log(firstLetter);
+        if(firstLetter == "B") {
+          document.getElementById('women_in_tech').innerHTML += "<h2>B</h2>";
+        }
+        document.getElementById('women_in_tech').innerHTML +=
+        ("<li><img class='ourImage' src=" + profiles[i].image_path + ">" + profiles[i].given_name + " " + profiles[i].surname + "</li>")
+      }
+    });
+    </script>
   </body>
 </html>
