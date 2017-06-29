@@ -67,11 +67,16 @@
       .clearUL {
         clear:both;
       }
+
+      .ourImage {
+        width:150px;
+        height:150px;
+      }
     </style>
   </head>
   <body>
 
-    <h1>Something Awesome</h1>
+    <h1>Super cool website about women scientists</h1>
     <nav class="primary-nav">
     <ul>
       <li class="active"><a href="#">Home</a></li>
@@ -99,63 +104,47 @@
       </li>
       <li><a href="#">Community Resources</a>
         <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Sub Menu 1</a></li>
+          <li><a href="#">Sub Menu 2</a></li>
+          <li><a href="#">Sub Menu 3</a></li>
         </ul>
       </li>
-      <li><a href="#">Contact Us</a>
-        <ul>
-          <li><a href="#">Nater</a></li>
-          <li><a href="#">watch nate being wierd</a></li>
-          <li><a href="#">Mary</a></li>
-      </ul>
-    </li>
+      <li><a href="#">Contact Us</a></li>
     </ul>
     </nav>
+    <!--  Place holder for women in technology list-->
+    <ul id="women_in_tech" style="clear:both">
 
-<script type="text/javascript">
-var alphabetArray = ["A", "B", "C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S",
-"T","U","V","W","X","Y","Z"];
+    </ul>
+    <script type="text/javascript">
+    // AJAX function to get data file
+    function readJSONFile(file, callback) {
+      var rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+          callback(rawFile.responseText);
+        }
+      }
+      rawFile.send(null);
+    }
 
-var i;
-var arrayLength = alphabetArray.length;
-document.write("<ul class='clearUL'>");
-for(i=0; i < arrayLength; i++) {
-    document.write("<li><a href='#alpha-" + alphabetArray[i].toLowerCase() + "'>" + alphabetArray[i] + "</a></li>")
-
-}
-document.write("</ul>");
-
-</script>
-
-
-    <h3 id="alpha-a">A</h3>
-    <h3 id="alpha-b">B</h3>
-    <h3 id="alpha-c">C</h3>
-    <h3 id="alpha-d">D</h3>
-    <h3 id="alpha-e">E</h3>
-    <h3 id="alpha-f">F</h3>
-    <h3 id="alpha-g">G</h3>
-    <h3 id="alpha-h">H</h3>
-    <h3 id="alpha-i">I</h3>
-    <h3 id="alpha-j">J</h3>
-    <h3 id="alpha-k">K</h3>
-    <h3 id="alpha-l">L</h3>
-    <h3 id="alpha-m">M</h3>
-    <h3 id="alpha-n">N</h3>
-    <h3 id="alpha-o">O</h3>
-    <h3 id="alpha-p">P</h3>
-    <h3 id="alpha-q">Q</h3>
-    <h3 id="alpha-r">R</h3>
-    <h3 id="alpha-s">S</h3>
-    <h3 id="alpha-t">T</h3>
-    <h3 id="alpha-u">U</h3>
-    <h3 id="alpha-v">V</h3>
-    <h3 id="alpha-w">W</h3>
-    <h3 id="alpha-x">X</h3>
-    <h3 id="alpha-y">Y</h3>
-    <h3 id="alpha-z">Z</h3>
-
+    //Usage:
+    readJSONFile("data/wit.json", function(text) {
+      var data = JSON.parse(text);
+      var profiles = data.profiles;
+      for (var i = 0; i < profiles.length; i++) {
+          var surname= profiles[i].surname;
+          var firstLetter = surname.charAt(0);
+          console.log(firstLetter);
+          if(firstLetter == "B") {
+            document.getElementById('women_in_tech').innerHTML += "<h2>B</h2>";
+          }
+        document.getElementById('women_in_tech').innerHTML +=
+        ("<li><img class='ourImage' src=" + profiles[i].image_path + ">" + profiles[i].given_name + " " + profiles[i].surname + "</li>")
+      }
+    });
+    </script>
   </body>
 </html>
