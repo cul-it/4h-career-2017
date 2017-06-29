@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+<<<<<<< HEAD
     <meta charset="utf-8">
     <title>Page Title</title>
+=======
+    <title>Navigation Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+>>>>>>> master
     <style>
       .primary-nav {
         margin-top: 15px
@@ -63,6 +68,7 @@
         display:block
       }
 
+<<<<<<< HEAD
       .clearul {
         clear:both;
       }
@@ -140,5 +146,71 @@ document.write("</ul>");
         <h3 id="alpha-y">Y</h3>
         <h3 id="alpha-z">Z</h3>
 
+=======
+    </style>
+  </head>
+  <body>
+    <h1>League of Coders</h1>
+    <!-- about, foundation donations, fields, a-z -->
+    <!-- home, our site, fields, centuries, future in stem -->
+    <!-- home, games, fields, all scientists, timeline -->
+    <!-- home, games, timeline, fields, directory -->
+    <!-- home, women in history, careers, colleges, community, feedback -->
+    <nav class="primary-nav">
+    <ul>
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Women in Technology</a>
+        <ul>
+          <li><a href="#">Sub Menu 1</a></li>
+          <li><a href="#">Sub Menu 2</a></li>
+          <li><a href="#">Sub Menu 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Fields in Technology</a>
+        <ul>
+          <li><a href="#">Sub Menu 1</a></li>
+          <li><a href="#">Sub Menu 2</a></li>
+          <li><a href="#">Sub Menu 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Community Resources</a>
+        <ul>
+          <li><a href="#">Sub Menu 1</a></li>
+          <li><a href="#">Sub Menu 2</a></li>
+          <li><a href="#">Sub Menu 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    </nav>
+    <!--  Place holder for women in technology list-->
+    <ul id="women_in_tech" style="clear:both">
+
+    </ul>
+    <script type="text/javascript">
+    // AJAX function to get data file
+    function readJSONFile(file, callback) {
+      var rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+          callback(rawFile.responseText);
+        }
+      }
+      rawFile.send(null);
+    }
+
+    //Usage:
+    readJSONFile("data/wit.json", function(text) {
+      var data = JSON.parse(text);
+      var profiles = data.profiles;
+      for (var i = 0; i < profiles.length; i++) {
+        document.getElementById('women_in_tech').innerHTML +=
+        ("<li><img src=" + profiles[i].image_path + ">" + profiles[i].given_name + " " + profiles[i].surname + "</li>")
+      }
+    });
+    </script>
+>>>>>>> master
   </body>
 </html>
