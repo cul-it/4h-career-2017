@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+<<<<<<< HEAD
     <meta charset="utf-8">
     <title>Page Title</title>
     <style>
@@ -71,6 +72,79 @@ clear:both;
   </head>
   <body>
     <h1>Women in Technology</h1>
+=======
+    <title>Navigation Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .primary-nav {
+        margin-top: 15px
+      }
+
+      .primary-nav ul {
+        list-style: none;
+        position: relative;
+        float: left;
+        margin: 0;
+        padding: 0
+      }
+
+      .primary-nav ul a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 32px;
+        padding: 0 15px;
+      }
+
+      .primary-nav ul li {
+        position: relative;
+        float: left;
+        margin: 0;
+        padding: 0
+      }
+
+      .primary-nav ul li.active {
+        background:#ddd
+      }
+
+      .primary-nav ul li:hover {
+        background:#f6f6f6
+      }
+
+      .primary-nav ul ul {
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        background:#fff;
+        padding:0
+      }
+
+      .primary-nav ul ul li {
+        float:none;
+        min-width:120px
+      }
+
+      .primary-nav ul ul a {
+        line-height:120%;
+        padding:10px 15px
+      }
+
+      .primary-nav ul li:hover > ul{
+        display:block
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>League of Coders</h1>
+    <!-- about, foundation donations, fields, a-z -->
+    <!-- home, our site, fields, centuries, future in stem -->
+    <!-- home, games, fields, all scientists, timeline -->
+    <!-- home, games, timeline, fields, directory -->
+    <!-- home, women in history, careers, colleges, community, feedback -->
+>>>>>>> master
     <nav class="primary-nav">
     <ul>
       <li class="active"><a href="#">Home</a></li>
@@ -83,11 +157,17 @@ clear:both;
       </li>
       <li><a href="#">Fields in Technology</a>
         <ul>
+<<<<<<< HEAD
           <li><a href="#">Careers</a></li>
           <li><a href="#">Computing</a></li>
           <li><a href="#">Engineering</a></li>
           <li><a href="#">Math</a></li>
           <li><a href="#">Science</a></li>
+=======
+          <li><a href="#">Sub Menu 1</a></li>
+          <li><a href="#">Sub Menu 2</a></li>
+          <li><a href="#">Sub Menu 3</a></li>
+>>>>>>> master
         </ul>
       </li>
       <li><a href="#">Community Resources</a>
@@ -100,6 +180,7 @@ clear:both;
       <li><a href="#">Contact Us</a></li>
     </ul>
     </nav>
+<<<<<<< HEAD
 
 
 <script type="text/javascript">
@@ -171,5 +252,35 @@ document.write("</ul>");
     <h3 id="alpha-y">Y</h3>
     <h3 id="alpha-z">Z</h3>
 
+=======
+    <!--  Place holder for women in technology list-->
+    <ul id="women_in_tech" style="clear:both">
+
+    </ul>
+    <script type="text/javascript">
+    // AJAX function to get data file
+    function readJSONFile(file, callback) {
+      var rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+          callback(rawFile.responseText);
+        }
+      }
+      rawFile.send(null);
+    }
+
+    //Usage:
+    readJSONFile("data/wit.json", function(text) {
+      var data = JSON.parse(text);
+      var profiles = data.profiles;
+      for (var i = 0; i < profiles.length; i++) {
+        document.getElementById('women_in_tech').innerHTML +=
+        ("<li><img src=" + profiles[i].image_path + ">" + profiles[i].given_name + " " + profiles[i].surname + "</li>")
+      }
+    });
+    </script>
+>>>>>>> master
   </body>
 </html>
