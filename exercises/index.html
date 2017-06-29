@@ -9,7 +9,12 @@
       font-family: "Raleway";
        font-weight:bold;
        color: #FF7F00
+
     }
+  ul{
+    list-style: none;
+  }
+
 
 h2 {background-color: cyan;}
 img {
@@ -52,11 +57,11 @@ img {
   are fundamental to modern programming languages.
   She was one of the first programmers on the first computers in the United States, the <strong>Harvard Mark I.</strong>
   </p>
+  <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
 
- <ul>
-   <li>Ada Lovelace</li>
-   <li>Adele Goldberg</li>
-   <li>Carol Shaw</li>
+<h3>Other notable women</h3>
+<ul>
+
  </ul>
   <!-- Include JavaScript examples within script tags below -->
   <script type="text/javascript">
@@ -69,7 +74,7 @@ var myNumberVariable = 1952;
 
 
 //Store list/array in variable
-var namesArray = [ "Ada Lovelace","Adele Goldberg","Anita Borg","Audrey Tang","Éva Tardos","Barbara Liskov","Beatrice Helen Worsley",
+var namesArray = [ "Ada Lovelace","Adele Goldberg","Carol Shaw","Anita Borg","Audrey Tang","Éva Tardos","Barbara Liskov","Beatrice Helen Worsley",
 "Betty Holberton","Carla Meninsky","Carol Shaw","Dame Stephanie","Dana Ulery","Donna Dubinsky","Edith Clarke",
 "Elizabeth J. Feinler","Ellen Spertus","Erna Schneider Hoover","Evelyn Boyd Granville","Frances Brazier","Frances E. Allen",
 "Frances Spence","Gertrude Blanch","Grace Hopper","Grete Hermann","Hedy Lamarr","Henrietta Swan Leavitt","Ida Rhodes",
@@ -79,7 +84,7 @@ var namesArray = [ "Ada Lovelace","Adele Goldberg","Anita Borg","Audrey Tang","�
 "Mary Shaw","Melanie","Monica S. Lam","Phyllis Fox","Radia Perlman","Rana el Kaliouby","Rósa Péter","Rebecca Enonchong","Roberta Williams",
 "Ruchi Sanghvi","Ruth Lichterman","Sally Floyd","Sandra Kurtzig","Susan Estrada","Susan Nycum","Thelma Estrin","Window Snyder","Xiaoyuan Tu"];
 //Output first element
-document.write("First item in array:" + namesArray[0]);
+
 
 
 //If conditional
@@ -90,9 +95,11 @@ if(namesArray[0] == "somevalue") {
 
 //For loop with array
 var index;
+document.write("<ul>");
 for(index = 0; index < namesArray.length; index++) {
-  document.write("<li>" + namesArray[index]);
+  document.write("<li>" + namesArray[index] + "</li>");
 }
+document.write("</ul>");
 
 var profilesArray = [
   {
