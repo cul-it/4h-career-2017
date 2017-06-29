@@ -1,0 +1,36 @@
+{
+  "institutions": [
+    {
+      "id": "0",
+      "name": "Cornell University",
+      "description": "Cornell University is an American private Ivy League and land-grant doctoral university located in Ithaca, New York. Founded in 1865 by Ezra Cornell and Andrew Dickson White, the university was intended to teach and make contributions in all fields of knowledge—from the classics to the sciences, and from the theoretical to the applied.",
+      "established": "1865",
+      "url": "http://cornell.edu",
+      "zip": "14850"
+    },
+    {
+      "id": "1",
+      "name": "Ithaca College",
+      "description": "Ithaca College is a private, nonsectarian, coeducational liberal arts college located on the South Hill of Ithaca, New York, United States. The college was founded by William Egbert in 1892 as a conservatory of music and is set against the backdrop of the city of Ithaca, Cayuga Lake, waterfalls, and gorges. The college is best known for its large list of alumni who have played substantial roles in the media and entertainment industries.",
+      "established": "1892",
+      "url": "http://ithaca.edu",
+      "zip": "14850"
+    },
+    {
+      "id": "2",
+      "name": "Tompkins Cortland Community College",
+      "description": "Tompkins Cortland Community College is a public two-year college supported by Cortland and Tompkins Counties. The main college campus is located in the Town of Dryden. Extension sites are located in Cortland, New York and Ithaca, New York. Tompkins Cortland Community College is one of 64-member institutions of the State University of New York system.",
+      "established": "1968",
+      "url": "http://tc3.edu",
+      "zip": "14850"
+    },
+    {
+      "id": "3",
+      "name": "Binghamton University",
+      "description": "The State University of New York at Binghamton, commonly referred to as Binghamton University, is a public research university with campuses in Binghamton, Vestal, and Johnson City, New York, United States. Since its establishment as Triple Cities College in 1946, the school has evolved from a small liberal arts college to a large doctoral-granting institution.",
+      "established": "1946",
+      "url": "http://binghamton.edu",
+      "zip": "13902"
+    },
+  ]
+}
