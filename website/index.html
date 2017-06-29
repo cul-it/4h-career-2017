@@ -1,6 +1,162 @@
 <!DOCTYPE html>
 <html>
   <head>
+<<<<<<< HEAD
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <style>
+    .primary-nav {
+      margin-top: 15px
+    }
+
+    .primary-nav ul {
+      list-style: none;
+      position: relative;
+      float: left;
+      margin: 0;
+      padding: 0
+    }
+
+    .primary-nav ul a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 32px;
+      padding: 0 15px;
+    }
+
+    .primary-nav ul li {
+      position: relative;
+      float: left;
+      margin: 0;
+      padding: 0
+    }
+
+    .primary-nav ul li.active {
+      background:#ddd
+    }
+
+    .primary-nav ul li:hover {
+      background:#f6f6f6
+    }
+
+    .primary-nav ul ul {
+      display:none;
+      position:absolute;
+      top:100%;
+      left:0;
+      background:#fff;
+      padding:0
+    }
+
+    .primary-nav ul ul li {
+      float:none;
+      min-width:120px
+    }
+
+    .primary-nav ul ul a {
+      line-height:120%;
+      padding:10px 15px
+    }
+
+    .primary-nav ul li:hover > ul{
+      display:block
+    }
+
+
+    .clearUL {
+    Clear:both;
+  }
+
+.ourImage {
+  width: 150px;
+  height: 150px;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>Something Awesome</h1>
+
+      <h1>League of Coders</h1>
+      <nav class="primary-nav">
+      <ul>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Women scientist</a>
+          <ul>
+
+            <li><a href="#">Sub Menu 1</a></li>
+            <li><a href="#">Sub Menu 2</a></li>
+            <li><a href="#">Sub Menu 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Fields in Technology</a>
+          <ul>
+            <li><a href="#">Sub Menu 1</a></li>
+            <li><a href="#">Sub Menu 2</a></li>
+            <li><a href="#">Sub Menu 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Community Resources</a>
+          <ul>
+            <li><a href="#">Sub Menu 1</a></li>
+            <li><a href="#">Sub Menu 2</a></li>
+            <li><a href="#">Sub Menu 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      </nav>
+
+
+      <script type="text/javascript">
+      var alphabetArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+      var i;
+var arrayLength = alphabetArray.length;
+document.write("<ul class='clearUL'>");
+      for(i=0; i < arrayLength; i++) {
+        document.write("<li><a href='#alpha-" + alphabetArray[i].toLowerCase() + "'>" + alphabetArray[i] + "</a></li>");
+      }
+      document.write("</ul>");
+
+
+    </script>
+
+
+
+
+
+      <h3 id="alpha-a">A</h3>
+      <h3 id="alpha-b">B</h3>
+      <h3 id="alpha-c">C</h3>
+      <h3 id="alpha-d">D</h3>
+      <h3 id="alpha-e">E</h3>
+      <h3 id="alpha-f">F</h3>
+      <h3 id="alpha-g">G</h3>
+      <h3 id="alpha-h">H</h3>
+      <h3 id="alpha-i">I</h3>
+      <h3 id="alpha-j">J</h3>
+      <h3 id="alpha-k">K</h3>
+      <h3 id="alpha-l">L</h3>
+      <h3 id="alpha-m">M</h3>
+      <h3 id="alpha-n">N</h3>
+      <h3 id="alpha-o">O</h3>
+      <h3 id="alpha-p">P</h3>
+      <h3 id="alpha-q">Q</h3>
+      <h3 id="alpha-r">R</h3>
+      <h3 id="alpha-s">S</h3>
+      <h3 id="alpha-t">T</h3>
+      <h3 id="alpha-u">U</h3>
+      <h3 id="alpha-v">V</h3>
+      <h3 id="alpha-w">W</h3>
+      <h3 id="alpha-x">X</h3>
+      <h3 id="alpha-y">Y</h3>
+      <h3 id="alpha-z">Z</h3>
+
+
+=======
     <title>Navigation Code</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -122,10 +278,19 @@
       var data = JSON.parse(text);
       var profiles = data.profiles;
       for (var i = 0; i < profiles.length; i++) {
+          var surname = profiles[1].surname;
+          var firstLetter = surname.charAt(0);
+          console.log(firstLetter);
+          if(firstLetter == "B") {
+            document.getElementById('women_in_tech').innerHTML += ("<h2>B</h2>");
+
+
+          }
         document.getElementById('women_in_tech').innerHTML +=
-        ("<li><img src=" + profiles[i].image_path + ">" + profiles[i].given_name + " " + profiles[i].surname + "</li>")
+        ("<li><img class='ourImage' src=" + profiles[i].image_path + ">" + profiles[i].given_name + " " + profiles[i].surname + "</li>")
       }
     });
     </script>
+>>>>>>> master
   </body>
 </html>
