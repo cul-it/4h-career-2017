@@ -1,0 +1,26 @@
+/**Headings**/
+h1 {
+  color:blue;
+  font-weight:bold;
+}
+
+h2 {
+}
+
+/**Paragraph**/
+p {
+ padding:5px;
+ border: 1px solid black;
+}
+
+/**List Item**/
+li {
+font-style:italic;
+}
+
+/**Image**/
+img {
+background-color:red;
+width:200px;
+height:200px;
+}
