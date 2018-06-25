@@ -7,7 +7,7 @@ The planning, instruction, and facilitation team consisted of Camille Andrews, D
 ### GitHub
 Two folders were created in the repo. One for exercises for code snippets of HTML, CSS and JavaScript. The other for the website for the collection of Women in Technology.
 ### Materials
-The presentation we will be using/referring to is [here](https://docs.google.com/presentation/d/1zWneLclhY063LWSmxF6zDcUijYaNXneKNXouu_1WnF8/edit)
-A general outline of our day and topics can be found [here](https://docs.google.com/document/d/1pnzK5JzwxLTtZEeNvoF1C7AwWx5J64BlQsNEH_TAImE/edit)
-For reference, the 4H Career website is [here](http://4hstaff.cce.cornell.edu/career-explorations)
+* The presentation we will be using/referring to is [here](https://docs.google.com/presentation/d/1zWneLclhY063LWSmxF6zDcUijYaNXneKNXouu_1WnF8/edit) .
+* A general outline of our day and topics can be found [here](https://docs.google.com/document/d/1pnzK5JzwxLTtZEeNvoF1C7AwWx5J64BlQsNEH_TAImE/edit) .
+* For reference, the 4H Career website is [here](http://4hstaff.cce.cornell.edu/career-explorations) .
 
