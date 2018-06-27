@@ -12,18 +12,18 @@ Two folders were created in the repo. One for exercises for code snippets of HTM
 * For reference, the 4H Career website is [here](http://4hstaff.cce.cornell.edu/career-explorations) .
 ### Schedule Overview
 * Day 1 - Afternoon (2 pm - 4:30 pm)
-  * Welcome and Introduction
-  * Fundamentals of Building a Website
-  * GitHub and Git
+** Welcome and Introduction
+** Fundamentals of Building a Website
+** GitHub and Git
 * Day 2
-  *  User-centered Design
-  * Paper Prototyping 
-  * Testing 
-  * Afternoon Break (12-1 PM)
-  * Discussion: Affordances and Patterns
-  * Refine prototypes
-  * Tour
-  *  Fundamentals of Building a Website
+**  User-centered Design
+** Paper Prototyping 
+** Testing 
+** Afternoon Break (12-1 PM)
+** Discussion: Affordances and Patterns
+** Refine prototypes
+** Tour
+**  Fundamentals of Building a Website
 * Day 3
-  * Develop your own application
+** Develop your own application
 
