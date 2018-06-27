@@ -7,28 +7,50 @@
      h1 {
        font-weight:bold;
     }
+    .center-big{
+      font-size:300px;
+      font-style:bold;
+      color: rgb(2222222,0,222222222);
+
+    }
   </style>
 </head>
 
 <body>
 
-  
+
   <h1>League of Coders</h1>
+  <center>
+  <a href = "https://www.google.com" class = "center-big"> hello world </a>
+</center>
   <img src="images/league-of-coders.jpg" alt="League of Coders">
   <p>Interested in developing your own website? Considering a career in web design and development or coding apps? These are exciting fields with plenty of room to be creative and innovative! In this module, we'll start with the basics - HTML and CSS - and
     then learn how to integrate data and add fun user interactions into your site by writing conditionals, loops and functions using Javascript. No experience required.
   </p>
 
-  <!-- Include HTML Examples Here -->
-  
-  
+
   <!-- Include JavaScript examples within script tags below -->
   <script type="text/javascript">
     //JavaScript examples go here
-    
+    var myStringVariable = "Grace Hopper";
+    var myNumberVariable = 1952;
+    console.log(myStringVariable);
+    document.write("String variable: " + myStringVariable);
+    var namesArray = [ "Ada Lovelace","Adele Goldberg","Anita Borg","Audrey Tang","Éva Tardos","Barbara Liskov","Beatrice Helen Worsley",
+    "Betty Holberton","Carla Meninsky","Carol Shaw","Dame Stephanie","Dana Ulery","Donna Dubinsky","Edith Clarke",
+    "Elizabeth J. Feinler","Ellen Spertus","Erna Schneider Hoover","Evelyn Boyd Granville","Frances Brazier","Frances E. Allen",
+    "Frances Spence","Gertrude Blanch","Grace Hopper","Grete Hermann","Hedy Lamarr","Henrietta Swan Leavitt","Ida Rhodes",
+    "Irene Greif","Irma Wyman","Janese Swanson","Jean Bartik","Jean E. Sammet","Jeri Ellsworth","Joan Margaret Winters",
+    "Joanna Rutkowska","Judith Estrin","Juliana Rotich","Karen Spärck Jones","Kathleen Booth","Kay McNulty","Kimberly Bryant",
+    "Limor Fried","Lorinda Cherry","Lynn Conway","Maria Klawe","Marissa Mayer","Marlyn Wescoff","Mary Allen Wilkes","Mary Lou Jepsen",
+    "Mary Shaw","Melanie","Monica S. Lam","Phyllis Fox","Radia Perlman","Rana el Kaliouby","Rósa Péter","Rebecca Enonchong","Roberta Williams",
+    "Ruchi Sanghvi","Ruth Lichterman","Sally Floyd","Sandra Kurtzig","Susan Estrada","Susan Nycum","Thelma Estrin","Window Snyder","Xiaoyuan Tu"];
+    for (var x in namesArray){
+      document.write(namesArray[x] + " " + namesArray[x].length + "<br>");
+    }
   </script>
-  
-  
+
+
 </body>
 
 </html>

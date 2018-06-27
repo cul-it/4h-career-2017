@@ -24,7 +24,6 @@ document.write("First item in array:" + namesArray[0]);
 if(namesArray[0] == "somevalue") {
   document.write("First item in array:" + namesArray[0] + "*");
 }
- 
 
 //For loop with array
 var index;
